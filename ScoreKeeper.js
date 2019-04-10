@@ -1,5 +1,6 @@
 var p1Button = document.querySelector("#p1");
 var p2Button = document.querySelector("#p2");
+var resetButton = document.querySelector("#reset");
 var p1Display = document.querySelector("#p1Display");
 var p2Display = document.querySelector("#p2Display");
 var p1Score = 0;
@@ -27,4 +28,11 @@ p2Button.addEventListener("click", function() {
     }
     p2Display.textContent = p2Score;
   }
+});
+
+resetButton.addEventListener("click", function() {
+  p1Score = p1Display.textContent = p2Score = p2Display.textContent = 0;
+  gameOver = false;
+  p1Display.classList.remove("text-info");
+  p2Display.classList.remove("text-info");
 });
