@@ -25,7 +25,7 @@ p2Button.addEventListener("click", function() {
   if (!gameOver) {
     p2Score++;
     if (p2Score === winningScore) {
-      p1Display.classList.add("text-info");
+      p2CleDisplay.classList.add("text-info");
       gameOver = true;
     }
     p2Display.textContent = p2Score;
@@ -34,7 +34,7 @@ p2Button.addEventListener("click", function() {
 
 resetButton.addEventListener("click", function() {
   reset();
-  numInput.value = 0;
+  numInput.value = winnningScoreDisplay = 0;
 });
 
 numInput.addEventListener("change", function() {
